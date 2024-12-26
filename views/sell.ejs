@@ -1,0 +1,37 @@
+<%- include('partials/header') -%>
+
+<form action="/sell" method="post">
+	<input
+		type="text"
+		class="item-name"
+		placeholder="Item name"
+		name="itemName"
+		required
+	/>
+	<div class="price">
+		<button class="add" type="button">add</button>
+		<input
+			type="number"
+			class="number"
+			min="0"
+			max="100"
+			step="5"
+			name="itemPrice"
+			required
+		/>
+		<button class="minus" type="button">minus</button>
+	</div>
+	<img src="" alt="" class="blah" />
+	<input
+		type="file"
+		accept="image/*"
+		name="itemImg"
+		class="p"
+		onchange="showImage()"
+		required
+	/>
+	<input data-hidden type="hidden" name="url" />
+	<button type="submit">Sell</button>
+</form>
+
+<%- include('partials/footer') -%>
